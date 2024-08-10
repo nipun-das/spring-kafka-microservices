@@ -16,13 +16,13 @@ public class KafkaTopicConfig {
     private String topicJsonName;
     @Bean
     public NewTopic topicCreator(){
-        return TopicBuilder.name("topicName")
+        return TopicBuilder.name(topicName)
                 .build();
     }
 
     @Bean
     public NewTopic topicCreatorJSON(){
-        return TopicBuilder.name("topicJsonName")
+        return TopicBuilder.name(topicJsonName)
                 .build();
     }
 }
